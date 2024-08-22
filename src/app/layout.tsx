@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { inter } from "./ui/fonts";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Navbar } from "./ui/navbar";
 
 export const metadata: Metadata = {
   title: "Daniel Denton Dev",
@@ -17,10 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
-      <header>
+        <Navbar />
+      {/* <header>
         <h1>Daniel Denton</h1>
         <h3>Software Developer</h3>
-      </header>
+      </header> */}
         {children}
       </body>
     </html>
