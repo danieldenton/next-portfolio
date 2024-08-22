@@ -1,10 +1,10 @@
 import Image from "next/image";
-import headshot from "../../assets/headshot.png"
+import headshot from "../../assets/headshot.png";
 
-export default function About() {
+export const About = () => {
   return (
     <>
-    <Image src={headshot} alt="head shot" className="headshot" />
+      <Image src={headshot} alt="head shot" className="headshot" />
       <p className="bio">
         I'm a full stack developer currently working with React Native and Ruby
         on Rails, however I'm comfortable working with a variety of languages,
@@ -28,4 +28,4 @@ export default function About() {
       </p>
     </>
   );
-}
+};
