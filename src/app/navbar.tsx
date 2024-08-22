@@ -1,23 +1,19 @@
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
+const links = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Web3", href: "/web3" },
+];
+
 export const Navbar = () => {
-  return (
-    <nav className="bg-gray-800 p-4">
-      <ul className="flex space-x-4">
-        <li>
-          <a href="/" className="text-white">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="/about" className="text-white">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="/contact" className="text-white">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
-  );
+  const pathame = usePathname();
+  const navLinks = links.map((link) => {
+    return <Link key={link.name} href={link.href} className={clsx()}></Link>;
+  });
+
+  return { navLinks };
 };
