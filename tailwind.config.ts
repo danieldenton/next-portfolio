@@ -7,24 +7,26 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      'black': 'rgb(40, 40, 40)',
-      'white': ' #e5e5e5',
-      'blue': '#1fb6ff',
-      'purple': '#7e5bef',
-      'pink': '#ff49db',
-      'orange': '#ff7849',
-      'green': '#13ce66',
-      'yellow': 'rgb(234, 255, 0)',
-      'gray-dark': '#273444',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
-    },
+   
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        'black': 'rgb(40, 40, 40)',
+        'white': ' #e5e5e5',
+        'yellow': 'rgb(234, 255, 0)',
+      },
+      animation: {
+        fade: 'fadeOut 2s ease-in-out',
+      },
+      keyframes: {
+        fadeOut: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
     },
   },

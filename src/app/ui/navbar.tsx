@@ -19,7 +19,7 @@ export const Navbar = () => {
       <Link
         key={link.name}
         href={link.href}
-        className={clsx(`${openSans.className} text-white hover:text-yellow`, {
+        className={clsx(`${openSans.className} text-white`, {
           "text-yellow": pathname === link.href,
         })}
       >
