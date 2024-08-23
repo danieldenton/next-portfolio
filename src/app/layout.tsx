@@ -17,9 +17,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.className} bg-black text-white`}>
         <Navbar />
-        <header>
-          <h1>Daniel Denton</h1>
-          <h3>Software Developer</h3>
+        <header className="flex flex-row justify-between m-8">
+          <div>
+          <h1 className="text-2xl">Daniel Denton</h1>
+          <h2 className="text-xl">Software Developer</h2>
+          </div>
+          <div>
+            <h2>DanielMDenton@gmail.com</h2>
+          </div>
         </header>
         {children}
       </body>

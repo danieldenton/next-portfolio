@@ -8,8 +8,7 @@ export default function Github() {
         href="https://github.com/danieldenton"
         className="github"
       >
-        <i class="fa-brands fa-github-square"></i>
-      </Link>
+<i className="fa-brands fa-square-github"></i>      </Link>
     );
   }
   
