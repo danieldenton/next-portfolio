@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
+import linkedIn from "../assets/linkedin-square-white-icon-transparent.png";
 
-export default function Github() {
-    return (
+export default function LinkedIn() {
+  return (
+    <>
       <Link
         target="_blank"
         rel="noreferrer"
-        href="https://github.com/danieldenton"
-        className="github"
+        href="https://www.linkedin.com/in/danielmdenton/"
       >
-<i className="fa-brands fa-square-github"></i>      </Link>
-    );
-  }
-  
+        <Image src={linkedIn} alt="linkedIn-logo" className="h-12 w-12 mt-0.5 mb-2" />
+      </Link>
+    </>
+  );
+}
