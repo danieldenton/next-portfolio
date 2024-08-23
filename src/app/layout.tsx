@@ -17,10 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
         <Navbar />
-      {/* <header>
-        <h1>Daniel Denton</h1>
-        <h3>Software Developer</h3>
-      </header> */}
+        <header>
+          <h1>Daniel Denton</h1>
+          <h3>Software Developer</h3>
+        </header>
         {children}
       </body>
     </html>

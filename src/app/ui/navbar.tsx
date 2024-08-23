@@ -19,16 +19,21 @@ export const Navbar = () => {
       <Link
         key={link.name}
         href={link.href}
-        // className={clsx(`${inter.className} text-white`, {
-        //   "bg-sky-100 text-blue-600": pathname === link.href,
-        // })}
-        className="test-white"
-      ></Link>
+        className={clsx(`${inter.className} text-white`, {
+          "text-yellow-600": pathname === link.href,
+        })}
+      >
+        {link.name}
+      </Link>
     );
   });
 
-  return <>{navLinks}</>;
-//   return (
-//     <h1 className="text-white">HEY</h1>
-// )
+  return (
+    <div
+      className="flex justify-around mt-8 mb-8
+  "
+    >
+      {navLinks}
+    </div>
+  );
 };
