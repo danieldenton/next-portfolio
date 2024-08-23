@@ -1,5 +1,7 @@
-import Image from "next/image";
+import ContactForm from "./ui/contact-form";
 
 export default function Home() {
-  return <main></main>;
+  return (
+    <div></div>
+  );
 }

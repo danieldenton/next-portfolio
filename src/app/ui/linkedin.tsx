@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import linkedIn from "../assets/linkedin-square-white-icon-transparent.png";
+import linkedIn from "../../../public/assets/linkedin-square-white-icon-transparent.png";
 
 export default function LinkedIn() {
   return (

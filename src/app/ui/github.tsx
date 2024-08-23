@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import github from "../assets/github-mark-white.png";
+import github from "../../../public/assets/github-mark-white.png";
 
 export default function Github() {
   return (
