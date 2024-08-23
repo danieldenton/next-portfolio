@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter } from "./ui/fonts";
+import { openSans } from "./ui/fonts";
 import "./globals.css";
 import { Navbar } from "./ui/navbar";
 
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>
+      <body className={`${openSans.className} bg-black text-white`}>
         <Navbar />
         <header>
           <h1>Daniel Denton</h1>

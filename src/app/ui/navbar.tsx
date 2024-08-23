@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { inter } from "./fonts";
+import { openSans } from "./fonts";
 
 const links = [
   { name: "Home", href: "/" },
@@ -19,7 +19,7 @@ export const Navbar = () => {
       <Link
         key={link.name}
         href={link.href}
-        className={clsx(`${inter.className} text-white`, {
+        className={clsx(`${openSans.className} text-white`, {
           "text-yellow-600": pathname === link.href,
         })}
       >
