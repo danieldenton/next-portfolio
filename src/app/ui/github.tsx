@@ -9,8 +9,9 @@ export default function Github() {
         target="_blank"
         rel="noreferrer"
         href="https://github.com/danieldenton"
+        className="m-1"
       >
-        <Image src={github} alt="github-logo" className="h-10 w-10 m-1" />
+        <Image src={github} alt="github-logo" className="h-10 w-10" />
       </Link>
     </>
   );

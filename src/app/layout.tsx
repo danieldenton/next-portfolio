@@ -20,11 +20,11 @@ export default function RootLayout({
       <body className={`${openSans.className} bg-black text-white`}>
         <header className="flex flex-row justify-between m-10">
           <div className="mt-3">
-            <h1 className="text-3xl">Daniel Denton</h1>
+            <h1 className="text-4xl mb-1.5">Daniel Denton</h1>
             <h2 className="text-xl">Software Developer</h2>
           </div>
           <div className="">
-            <div className="flex flex-row justify-end">
+            <div className="flex flex-row justify-end mt-1">
               <Github />
               <LinkedIn />
             </div>
