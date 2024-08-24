@@ -21,7 +21,7 @@ export default function ContactForm() {
           <p>Message Sent!</p>
         </div>
       ) : (
-        <Form onSubmit={sendEmail} ref={form} className="w-3/4">
+        <Form onSubmit={sendEmail} className="w-3/4">
           <Form.Group
             className="mb-3 flex flex-col"
             controlId="exampleForm.ControlInput1"
