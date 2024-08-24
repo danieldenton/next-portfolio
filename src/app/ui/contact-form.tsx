@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -12,19 +11,7 @@ export default function ContactForm() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_rj9lbxe", "template_5tdcrwf", form.current, {
-        publicKey: "tkNcmbiASi0TUZpR7",
-      })
-      .then(
-        () => {
-          setMessageSent(true);
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    
   };
 
   return (
