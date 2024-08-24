@@ -16,7 +16,7 @@ export default function ContactForm() {
 
   return (
     <Card className=" flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
-      {/* {messageSent ? (
+      {messageSent ? (
         <div>
           <p>Message Sent!</p>
         </div>
@@ -66,7 +66,7 @@ export default function ContactForm() {
             Send
           </Button>
         </Form>
-      )} */}
+      )}
     </Card>
   );
 }
