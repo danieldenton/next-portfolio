@@ -1,19 +1,27 @@
-import React, { useRef, useState } from "react";
+"use client";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 export default function ContactForm() {
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [messageSent, setMessageSent] = useState(false);
-  const form = useRef<HTMLFormElement>();
 
-  const sendEmail = (e: HTMLFormElement) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_rj9lbxe", "template_5tdcrwf", form.current, {
-        publicKey: "tkNcmbiASi0TUZpR7",
-      })
+      .sendForm(
+        "service_rj9lbxe",
+        "template_5tdcrwf",
+        `name: ${name}, email: ${email}, message: ${message}`,
+        {
+          publicKey: "tkNcmbiASi0TUZpR7",
+        }
+      )
       .then(
         () => {
           setMessageSent(true);
@@ -26,66 +34,49 @@ export default function ContactForm() {
   };
 
   return (
-    <Card
-      style={{
-        width: "500px",
-        height: "480px",
-        backgroundColor: "black",
-        border: "solid 3px white",
-        borderRadius: "10px",
-      }}
-      className="mx-auto px-4"
-    >
+    <Card className=" flex justify-center align-center mx-auto border border-white p-4 rounded p-20 mt-20 w-2/5">
       {messageSent ? (
-        <div
-          variant="success"
-          style={{
-            width: "500px",
-            height: "480px",
-          }}
-        >
-          <p style={{ fontSize: "30px", marginTop: '190px' }}>Message Sent!</p>
+        <div>
+          <p>Message Sent!</p>
         </div>
       ) : (
-        <Form
-          onSubmit={sendEmail}
-          ref={form}
-          style={{ maxWidth: "450px", margin: "50px auto" }}
-        >
-          <Form.Group
-            className="mb-3"
-            style={{ marginBottom: "10px" }}
-            controlId="exampleForm.ControlInput1"
-          >
-            <Form.Label style={{ fontWeight: "bold" }}>Name</Form.Label>
-            <Form.Control type="text" name="name" className="input" />
+        <Form onSubmit={sendEmail} className="">
+          <Form.Group className="mb-3 flex flex-col" controlId="exampleForm.ControlInput1">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              className=""
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
           </Form.Group>
 
           <Form.Group
-            className="mb-3"
-            style={{ marginBottom: "10px" }}
+            className="mb-3 flex flex-col"
             controlId="exampleForm.ControlInput1"
           >
-            <Form.Label style={{ fontWeight: "bold", marginBottom: "7px" }}>
+            <Form.Label>
               Email
             </Form.Label>
-            <Form.Control type="email" name="email" className="input" />
+            <Form.Control
+              type="email"
+              name="email"
+              className=""
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </Form.Group>
 
-          <Form.Group
-            className="mb-3"
-            style={{ marginBottom: "10px" }}
-            controlId="exampleForm.ControlTextarea1"
-          >
-            <Form.Label style={{ fontWeight: "bold", marginBottom: "7px" }}>
-              Message
-            </Form.Label>
+          <Form.Group className="mb-3 flex flex-col" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Message</Form.Label>
             <Form.Control
               type="text"
               name="message"
               as="textarea"
               rows={8}
-              className="message-input"
+              className=""
+              onChange={(e) => setMessage(e.target.value)}
             />
           </Form.Group>
 
@@ -96,4 +87,4 @@ export default function ContactForm() {
       )}
     </Card>
   );
-};
+}
