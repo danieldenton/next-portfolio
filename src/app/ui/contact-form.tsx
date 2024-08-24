@@ -1,27 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 export default function ContactForm() {
-  const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [messageSent, setMessageSent] = useState(false);
+  const form = useRef()
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     emailjs
-      .sendForm(
-        "service_rj9lbxe",
-        "template_5tdcrwf",
-        `name: ${name}, email: ${email}, message: ${message}`,
-        {
-          publicKey: "tkNcmbiASi0TUZpR7",
-        }
-      )
+      .sendForm("service_rj9lbxe", "template_5tdcrwf", form.current, {
+        publicKey: "tkNcmbiASi0TUZpR7",
+      })
       .then(
         () => {
           setMessageSent(true);
@@ -34,22 +28,22 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className=" flex justify-center align-center mx-auto border border-white p-4 rounded p-20 mt-20 w-2/5">
+    <Card className=" flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
       {messageSent ? (
         <div>
           <p>Message Sent!</p>
         </div>
       ) : (
-        <Form onSubmit={sendEmail} className="">
-          <Form.Group className="mb-3 flex flex-col" controlId="exampleForm.ControlInput1">
-            <Form.Label>Name</Form.Label>
+        <Form onSubmit={sendEmail} ref={form} className="w-3/4">
+          <Form.Group
+            className="mb-3 flex flex-col"
+            controlId="exampleForm.ControlInput1"
+          >
+            <Form.Label className="mb-1 flex justify-center">Name</Form.Label>
             <Form.Control
               type="text"
               name="name"
-              className=""
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
+              className="rounded text-black focus:outline-none p-1"
             />
           </Form.Group>
 
@@ -57,26 +51,27 @@ export default function ContactForm() {
             className="mb-3 flex flex-col"
             controlId="exampleForm.ControlInput1"
           >
-            <Form.Label>
-              Email
-            </Form.Label>
+            <Form.Label className="mb-1 flex justify-center">Email</Form.Label>
             <Form.Control
               type="email"
               name="email"
-              className=""
-              onChange={(e) => setEmail(e.target.value)}
+              className="rounded text-black focus:outline-none p-1"
             />
           </Form.Group>
 
-          <Form.Group className="mb-3 flex flex-col" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Message</Form.Label>
+          <Form.Group
+            className="mb-3 flex flex-col justify-center"
+            controlId="exampleForm.ControlTextarea1"
+          >
+            <Form.Label className="mb-1 flex justify-center">
+              Message
+            </Form.Label>
             <Form.Control
               type="text"
               name="message"
               as="textarea"
-              rows={8}
-              className=""
-              onChange={(e) => setMessage(e.target.value)}
+              rows={12}
+              className="rounded text-black focus:outline-none p-1"
             />
           </Form.Group>
 
