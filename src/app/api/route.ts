@@ -3,13 +3,20 @@ import { EmailTemplate } from '@/app/components/email-template';
 
 const resend = new Resend(process.env.resendKey);
 
-export async function POST() {
+interface IProps {
+  name: string
+  email: string
+  message: string
+}
+
+export async function POST(props: IProps) {
+  const { name, email, message } = props
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['delivered@resend.dev'],
+      from: email,
+      to: ['danieldentondev@gmail.com'],
       subject: 'Hello world',
-      react: EmailTemplate({ firstName: 'Check' }),
+      html: `from: ${name} ${email}`,
     });
 
     if (error) {

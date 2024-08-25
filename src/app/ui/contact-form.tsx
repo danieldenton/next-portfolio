@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { POST } from "../api/route";
 
 export default function ContactForm() {
   const [messageSent, setMessageSent] = useState(false);
@@ -12,6 +13,7 @@ export default function ContactForm() {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    POST(name, email, message)
   };
 
   return (
