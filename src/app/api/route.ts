@@ -3,7 +3,7 @@ import { EmailTemplate } from "@/app/components/email-template";
 
 const resend = new Resend(process.env.resendKey);
 
-interface Iprops {
+interface req {
   name: string;
   email: string;
   message: string;
@@ -13,7 +13,7 @@ export async function POST({
   name,
   email,
   message
-}: Iprops) {
+}: req) {
   try {
     const { data, error } = await resend.emails.send({
       from: email,
