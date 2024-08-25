@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { POST } from "../api/route";
 
 export default function ContactForm() {
   const [messageSent, setMessageSent] = useState(false);
@@ -14,10 +13,23 @@ export default function ContactForm() {
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     try {
-      const response = await POST({ name, email, message });
-      if (response) {
+      const res = await fetch("/api/sen/droute", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (res.ok) {
         setMessageSent(true);
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setError(true);
       }
     } catch (error) {
       setError(true);
@@ -82,7 +94,7 @@ export default function ContactForm() {
           ) : (
             <p>
               There was an issue sending this message. If this persits you can
-              also send an email directly to danieldentondev@gmail.com
+              also send an email directly to danieldentondev@gmail.com{" "}
             </p>
           )}
         </div>
