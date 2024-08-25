@@ -28,7 +28,7 @@ export default function RootLayout({
               <Github />
               <LinkedIn />
             </div>
-            <h2>DanielMDenton@gmail.com</h2>
+            <h2>danieldentondev@gmail.com</h2>
           </div>
         </header>
         <hr />
