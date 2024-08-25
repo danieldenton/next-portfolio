@@ -3,7 +3,17 @@ import { EmailTemplate } from "@/app/components/email-template";
 
 const resend = new Resend(process.env.resendKey);
 
-export async function POST(name: string, email: string, message: string) {
+interface Iprops {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export async function POST({
+  name,
+  email,
+  message
+}: Iprops) {
   try {
     const { data, error } = await resend.emails.send({
       from: email,

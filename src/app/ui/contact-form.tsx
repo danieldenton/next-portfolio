@@ -7,22 +7,26 @@ import { POST } from "../api/route";
 
 export default function ContactForm() {
   const [messageSent, setMessageSent] = useState(false);
+  const [error, setError] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    POST(name, email, message)
+    try {
+      const response = await POST({ name, email, message });
+      if (response) {
+        setMessageSent(true);
+      }
+    } catch (error) {
+      setError(true);
+    }
   };
 
   return (
     <Card className=" flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
-      {messageSent ? (
-        <div>
-          <p>Message Sent!</p>
-        </div>
-      ) : (
+      {!messageSent && !error ? (
         <Form onSubmit={sendEmail} className="w-3/4">
           <Form.Group
             className="mb-3 flex flex-col"
@@ -33,8 +37,7 @@ export default function ContactForm() {
               type="text"
               name="name"
               className="rounded text-black focus:outline-none p-1"
-              onChange={(e) => setName(e.target.value)
-              }
+              onChange={(e) => setName(e.target.value)}
             />
           </Form.Group>
 
@@ -72,6 +75,17 @@ export default function ContactForm() {
             Send
           </Button>
         </Form>
+      ) : (
+        <div>
+          {!error ? (
+            <p>Message Sent!</p>
+          ) : (
+            <p>
+              There was an issue sending this message. If this persits you can
+              also send an email directly to danieldentondev@gmail.com
+            </p>
+          )}
+        </div>
       )}
     </Card>
   );
