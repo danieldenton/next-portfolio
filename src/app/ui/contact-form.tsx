@@ -6,12 +6,12 @@ import Button from "react-bootstrap/Button";
 
 export default function ContactForm() {
   const [messageSent, setMessageSent] = useState(false);
-  const form = useRef()
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    
   };
 
   return (
