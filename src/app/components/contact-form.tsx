@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Card from "react-bootstrap/Card";
+import Card from "react-bootstrap/Card"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -16,6 +16,9 @@ export default function ContactForm() {
     try {
       const res = await fetch("/api/route", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ name, email, message }),
       });
 
