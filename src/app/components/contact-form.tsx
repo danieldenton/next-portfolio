@@ -14,7 +14,7 @@ export default function ContactForm() {
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/route", {
+      const res = await fetch("/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
