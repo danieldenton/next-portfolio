@@ -1,10 +1,10 @@
 import { Resend } from "resend";
-import { NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
 
 const resend = new Resend(process.env.resendKey);
 const allowedDomains = ["https://danieldentondev.com", "https://www.danieldentondev.com"]
 
-export async function POST(req: any, res: NextApiResponse) {
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader(
     "Access-Control-Allow-Origin",
     allowedDomains
