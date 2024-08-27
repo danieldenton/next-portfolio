@@ -9,13 +9,7 @@ export async function POST(req: NextRequest) {
     "Access-Control-Allow-Origin",
     "https://www.danieldentondev.com"
   );
-  const { name, email, message } = await req.json();
-  if (req.method !== "POST") {
-    return NextResponse.json(
-      { message: "Method not allowed" },
-      { status: 405 }
-    );
-  }
+  const { name, email, message } = await req.json()
 
   try {
     const { data, error } = await resend.emails.send({
