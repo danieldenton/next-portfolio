@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.resendKey);
 const allowedDomains = ["https://danieldentondev.com", "https://www.danieldentondev.com"]
 
 export async function POST(req: any, res: NextApiResponse) {
