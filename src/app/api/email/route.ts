@@ -8,7 +8,8 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
     "Access-Control-Allow-Origin",
     "https://www.danieldentondev.com"
   );
-
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   const { name, email, message } = req.body;
   try {
     const { data, error } = await resend.emails.send({
