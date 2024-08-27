@@ -13,13 +13,9 @@ export default function ContactForm() {
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     try {
-      const res = await fetch("/api/sen/droute", {
+      const res = await fetch("/api/route", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
         body: JSON.stringify({ name, email, message }),
       });
 
@@ -28,8 +24,6 @@ export default function ContactForm() {
         setName("");
         setEmail("");
         setMessage("");
-      } else {
-        setError(true);
       }
     } catch (error) {
       setError(true);
@@ -92,9 +86,9 @@ export default function ContactForm() {
           {!error ? (
             <p>Message Sent!</p>
           ) : (
-            <p>
+            <p className="p-10">
               There was an issue sending this message. If this persits you can
-              also send an email directly to danieldentondev@gmail.com{" "}
+              also send an email directly to danieldentondev@gmail.com
             </p>
           )}
         </div>
