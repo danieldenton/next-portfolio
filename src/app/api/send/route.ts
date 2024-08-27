@@ -8,7 +8,7 @@ export async function POST(req: NextApiRequest) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "danieldentondev@gmail.com",
+      from: 'Acme <onboarding@resend.dev>',
       to: ["danieldentondev@gmail.com"],
       subject: `Portfolio Message from ${name}`,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong><br>${message}</p>`,

@@ -89,9 +89,9 @@ export default function ContactForm() {
           {!error ? (
             <p>Message Sent!</p>
           ) : (
-            <p>
+            <p className="p-10">
               There was an issue sending this message. If this persits you can
-              also send an email directly to danieldentondev@gmail.com{" "}
+              also send an email directly to danieldentondev@gmail.com
             </p>
           )}
         </div>
