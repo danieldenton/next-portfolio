@@ -26,7 +26,7 @@ function runMiddleware(
 }
 
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: any, res: NextApiResponse) {
   await runMiddleware(req, res, cors);
   // res.setHeader(
   //   "Access-Control-Allow-Origin",
