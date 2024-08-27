@@ -4,11 +4,19 @@ import { NextRequest, NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
-  const res = NextResponse.next(); 
-  res.headers.set("Access-Control-Allow-Origin", "https://www.danieldentondev.com")
-  res.headers.set("Access-Control-Allow-Methods", "POST");
-  res.headers.set("Access-Control-Allow-Headers", "Content-Type");
-  const { name, email, message } = await req.json()
+  const res = NextResponse.next();
+  res.headers.set(
+    "Access-Control-Allow-Origin",
+    "https://www.danieldentondev.com"
+  );
+  const { name, email, message } = await req.json();
+  if (req.method !== "POST") {
+    return NextResponse.json(
+      { message: "Method not allowed" },
+      { status: 405 }
+    );
+  }
+
   try {
     const { data, error } = await resend.emails.send({
       from: "Daniel <danie@danieldentondev.com>",
