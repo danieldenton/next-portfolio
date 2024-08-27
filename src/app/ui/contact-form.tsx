@@ -13,9 +13,8 @@ export default function ContactForm() {
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     try {
-      const res = await fetch("/api/sen/droute", {
+      const res = await fetch("/api/send/route", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,8 +27,6 @@ export default function ContactForm() {
         setName("");
         setEmail("");
         setMessage("");
-      } else {
-        setError(true);
       }
     } catch (error) {
       setError(true);
