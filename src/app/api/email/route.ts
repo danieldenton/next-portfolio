@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiResponse } from "next";
 
 const resend = new Resend(process.env.resendKey);
 const allowedDomains = ["https://danieldentondev.com", "https://www.danieldentondev.com"]
@@ -9,6 +9,8 @@ export async function POST(req: any, res: NextApiResponse) {
     "Access-Control-Allow-Origin",
     allowedDomains
   );
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  // res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   const { name, email, message } = req.body;
   try {
     const { data, error } = await resend.emails.send({
