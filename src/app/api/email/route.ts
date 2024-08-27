@@ -5,7 +5,7 @@ const resend = new Resend(process.env.resendKey);
 
 export async function POST(req: NextRequest) {
   const res = NextResponse.next(); // Create a response object for setting headers
-  res.headers.set("Access-Control-Allow-Origin", "https://danieldentondev.com")
+  res.headers.set("Access-Control-Allow-Origin", "https://www.danieldentondev.com")
   res.headers.set("Access-Control-Allow-Methods", "POST");
   res.headers.set("Access-Control-Allow-Headers", "Content-Type");
   const { name, email, message } = await req.json()
