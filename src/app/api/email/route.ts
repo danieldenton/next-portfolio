@@ -3,7 +3,12 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 const resend = new Resend(process.env.resendKey);
 
-export async function POST(req: NextApiRequest) {
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://www.danieldentondev.com"
+  );
+
   const { name, email, message } = req.body;
   try {
     const { data, error } = await resend.emails.send({
