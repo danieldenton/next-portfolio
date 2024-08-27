@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { NextApiRequest } from "next";
 
 
-export async function POST(req: NextApiRequest) {
+export default async function POST(req: NextApiRequest) {
   const { name, email, message } = req.body;
   const resend = new Resend(process.env.resendKey);
 

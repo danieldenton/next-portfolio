@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { openSans } from "./ui/fonts";
+import { openSans } from "./components/fonts";
 import "./globals.css";
-import { Navbar } from "./ui/navbar";
-import Github from "./ui/github";
-import LinkedIn from "./ui/linkedin";
+import { Navbar } from "./components/navbar";
+import Github from "./components/github";
+import LinkedIn from "./components/linkedin";
 
 export const metadata: Metadata = {
   title: "Daniel Denton Dev",
