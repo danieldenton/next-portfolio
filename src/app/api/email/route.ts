@@ -17,7 +17,7 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
       return Response.json({ error }, { status: 500 });
     }
 
-    return res.json(data);
+    return Response.json(data);
   } catch (error) {
     return Response.json({ error }, { status: 500 });
   }
