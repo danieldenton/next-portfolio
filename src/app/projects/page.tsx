@@ -1,7 +1,7 @@
 import Projects from "../components/projects";
-// import
 import dcdImg from "../../../public/assets/dcd.png"
 import dilImg from "../../../public/assets/dil.png"
+// import
 
 const oldProjects = [
   {
@@ -23,7 +23,6 @@ const oldProjects = [
 const projectDivs = oldProjects.map((project, idx) => {
   return (
     <Projects
-      className=""
       project={project}
       key={idx}
     />
@@ -31,5 +30,5 @@ const projectDivs = oldProjects.map((project, idx) => {
 });
 
 export default function ProjectPage() {
-  return <h1>Projects</h1>;
+  return <div className="flex sm:flex-row flex-col justify-around">{projectDivs}</div>;
 }
