@@ -33,8 +33,8 @@ export default function PainNavigator() {
       <p className="flex justify-center text-center mb-3">
         {painNavigator.description2}
       </p>
-      <div className="flex flex-wrap sm:flex-row flex-col justify-center mt-7 flex-end">
-        <div className="flex sm:flex-row flex-col sm:justify-around justify-center sm:w-3/4 w-full">
+      <div className="flex sm:flex-row flex-col justify-center mt-7">
+        <div className="flex sm:flex-row flex-col sm:justify-around justify-center sm:w-3/4 w-full ml-4">
           <Image
             className="flex justify-center rounded m-1"
             src={painNavImg2}
@@ -57,7 +57,7 @@ export default function PainNavigator() {
             width={225}
           />
         </div>
-        <div className="flex flex-col w-1/4">
+        <div className="flex flex-col sm:w-1/4 w-full">
           <div className="flex flex-col justify-center">
             <p className="text-center my-4 mx-1">Mobile App Repository</p>
             <div className="flex justify-center">

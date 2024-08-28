@@ -18,7 +18,7 @@ interface IProject {
 export default function Projects({ project, key }: IProject) {
   const { name, image, link, github, createdWith } = project;
   return (
-    <div className="p-10 mx-auto">
+    <div className="p-10 sm:mx-auto">
       <h2 className="flex justify-center text-xl">{name}</h2>
       <h3 className="flex justify-center">{createdWith}</h3>
       <div>
@@ -37,7 +37,7 @@ export default function Projects({ project, key }: IProject) {
           <Github githubLink={github} />
         </div>
       </div>
-      <Link href={link} target="_blank">
+      <Link href={link} target="_blank" className="flex justify-center">
         <Image
           src={image}
           alt={name}

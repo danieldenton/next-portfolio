@@ -37,7 +37,8 @@ export default function Web3() {
   });
 
   return (
-    <div className="animate-fade sm:mx-20 flex sm:flex-row flex-col flex-wrap">
+    // <div className="animate-fade sm:mx-20 mx-0 flex sm:flex-row flex-col flex-wrap border">
+    <div className="flex flex-wrap sm:mx-20 flex sm:flex-row flex-col my-10">
       {projectDivs}
     </div>
   );

@@ -13,7 +13,7 @@ export default function AppStore({ appStoreLink }: props) {
         target="_blank"
         rel="noreferrer"
         href={appStoreLink}
-        className="m-1 rounded"
+        className="m-1 rounded flex flex-shrink-0"
       >
         <Image src={googlePlay} alt="google-play-logo" height={42.75} width={128}/>
       </Link>
