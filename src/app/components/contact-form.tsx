@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Card from "react-bootstrap/Card"
+import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -34,7 +34,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className=" flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
+    <Card className="min-w-[400px] flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
       {!messageSent && !error ? (
         <Form onSubmit={sendEmail} className="w-3/4">
           <Form.Group
@@ -74,13 +74,16 @@ export default function ContactForm() {
               type="text"
               name="message"
               as="textarea"
-              rows={12}
+              rows={8}
               className="rounded text-black focus:outline-none p-1"
               onChange={(e) => setMessage(e.target.value)}
             />
           </Form.Group>
 
-          <Button type="submit" className="fw-bold form-button">
+          <Button
+            type="submit"
+            className="bg-grey rounded p-1.5 mt-4 font-bold w-full text-black hover:bg-white"
+          >
             Send
           </Button>
         </Form>
