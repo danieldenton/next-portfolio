@@ -17,7 +17,7 @@ const config: Config = {
         black: "rgb(40, 40, 40)",
         white: " #e5e5e5",
         yellow: "rgb(234, 255, 0)",
-        grey: "#9E9E9E",
+        grey: "#BDBDBD",
       },
       animation: {
         fade: "fadeOut 2s ease-in-out",
