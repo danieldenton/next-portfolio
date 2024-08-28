@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import googlePlay from "../../../public/assets/GooglePlay.jpg"
+import googlePlay from "../../../public/assets/GooglePlay.png"
 
 type props = {
     googlePlayLink: string
