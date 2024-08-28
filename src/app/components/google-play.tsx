@@ -13,9 +13,9 @@ export default function GooglePlay({ googlePlayLink }: props) {
         target="_blank"
         rel="noreferrer"
         href={googlePlayLink}
-        className="m-1"
+        className="m-1 rounded"
       >
-        <Image src={googlePlay} alt="google-play-logo" height={85.5} width={256}/>
+        <Image src={googlePlay} alt="google-play-logo" height={42.75} width={128}/>
       </Link>
     </>
   );

@@ -29,9 +29,9 @@ export default function ProjectPage() {
   });
 
   return (
-    <div>
+    <div className="animate-fade ">
       <PainNavigator />
-      <div className="animate-fade sm:mx-20 flex sm:flex-row flex-col">
+      <div className="sm:mx-20 flex sm:flex-row flex-col">
         {projectDivs}
       </div>
     </div>
