@@ -12,10 +12,10 @@ export default function Github({ githubLink }: props) {
       <Link
         target="_blank"
         rel="noreferrer"
-        href="https://github.com/danieldenton"
+        href={githubLink}
         className="m-1"
       >
-        <Image src={github} alt="github-logo" className="h-10 w-10" />
+        <Image src={github} alt="github-logo" height={42} width={42}/>
       </Link>
     </>
   );

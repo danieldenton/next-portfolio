@@ -9,7 +9,7 @@ interface IProject {
     image: StaticImageData;
     link: string;
     github: string;
-    youtube: string | null
+    youtube: string | null;
     createdWith: string;
   };
   key: number;
@@ -34,15 +34,13 @@ export default function Projects({ project, key }: IProject) {
           </div>
         ) : null} */}
         <div className="flex justify-center">
-          <Link href={github} target="_blank" className="">
-            <Github />
-          </Link>
+          <Github githubLink={github} />
         </div>
       </div>
       <Link href={link} target="_blank">
         <Image
           src={image}
-          alt="A Day In The Life"
+          alt={name}
           className="border rounded hover:border-yellow min-w-[400px]"
           width={427}
           height={250}
