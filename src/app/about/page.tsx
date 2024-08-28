@@ -4,6 +4,7 @@ import headshot from "../../../public/assets/headshot.png"
 export default function About() {
   return (
     <div className="flex flex-col justify-center items-center animate-fade sm:w-3/4 w-full overflow-hidden">
+      <div className="flex flex-wrap justify-around sm:mx-20 m-0 my-10 overflow-hidden animate-fade"></div>
       <Image src={headshot} alt="headshot" className="rounded-full m-5" height={200} width={200}/>
       <p className="flex justify-center text-center text-lg mb-5">
         I'm a full stack developer currently working with React Native and Ruby
