@@ -33,7 +33,7 @@ export default function Projects({ project, key }: IProject) {
             </a>
           </div>
         ) : null} */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-1 mb-3">
           <Github githubLink={github} />
         </div>
       </div>
