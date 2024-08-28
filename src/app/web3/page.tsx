@@ -37,7 +37,6 @@ export default function Web3() {
   });
 
   return (
-    // <div className="animate-fade sm:mx-20 mx-0 flex sm:flex-row flex-col flex-wrap border">
     <div className="flex flex-wrap justify-around sm:mx-20 m-0 flex sm:flex-row flex-col my-10 overflow-hidden">
       {projectDivs}
     </div>
