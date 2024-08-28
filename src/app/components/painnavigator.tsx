@@ -45,23 +45,11 @@ export default function PainNavigator() {
           <div className="pn-link-container">
             <div className="pn-link-divs">
               <p>Mobile App GitHub</p>
-              <Link
-                href={painNavigator.mobileAppGithub}
-                target="_blank"
-                className="project-github-link"
-              >
-                <Github />
-              </Link>
+              <Github githubLink={painNavigator.mobileAppGithub} />
             </div>
             <div className="pn-link-divs">
               <p>Server GitHub</p>
-              <Link
-                href={painNavigator.serverGithub}
-                target="_blank"
-                className="project-github-link"
-              >
-                <Github />
-              </Link>
+              <Github githubLink={painNavigator.serverGithub} />
             </div>
           </div>
           <div className="pn-half-div">

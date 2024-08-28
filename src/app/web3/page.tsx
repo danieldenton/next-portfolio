@@ -9,9 +9,8 @@ const projects = [
     name: "Dex Aggregator",
     image: dexAgg,
     link: "https://dex-agg1.netlify.app/",
-    youtube1: "https://www.youtube.com/watch?v=NFQ12ekqSH0",
     github: "https://github.com/danieldenton/dex-aggregator",
-    youtube: "",
+    youtube: "https://www.youtube.com/watch?v=NFQ12ekqSH0",
     createdWith: "Solidity, Hardhat, Ethers.js, React, TypeScript",
   },
   {

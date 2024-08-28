@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import github from "../../../public/assets/github-mark-white.png"
-export default function Github() {
+
+type props = {
+  githubLink: string
+}
+
+export default function Github({ githubLink }: props) {
   return (
     <>
       <Link
