@@ -19,7 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${openSans.className} bg-black text-white`}>
+      <body className={`${openSans.className} bg-black text-white overflow-x-hidden`}>
         <header className="flex sm:flex-row flex-col justify-between m-10 ">
           <div className="mt-3">
             <h1 className="text-4xl mb-1.5 flex sm:justify-start justify-center">
