@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { openSans } from "./fonts";
 
 const links = [
-  { name: "Home", href: "/" },
+  { name: "Contact", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Web3", href: "/web3" },
