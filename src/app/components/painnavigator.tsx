@@ -22,7 +22,7 @@ const painNavigator = {
 
 export default function PainNavigator() {
   return (
-    <div className="px-10 py-8 mx-10 border rounded">
+    <div className="px-10 py-8 mx-10">
       <h2 className="flex justify-center text-xl mb-1">{painNavigator.name}</h2>
       <p className="flex justify-center text-center text-lg mb-2">
         {painNavigator.createdWith}
@@ -57,7 +57,7 @@ export default function PainNavigator() {
             width={225}
           />
         </div>
-        <div className="flex flex-col sm:w-1/4 w-full">
+        <div className="flex flex-col sm:w-1/4 w-full mt-10">
           <div className="flex flex-col justify-center">
             <p className="text-center my-4 mx-1">Mobile App Repository</p>
             <div className="flex justify-center">
