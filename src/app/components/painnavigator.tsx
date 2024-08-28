@@ -34,7 +34,7 @@ export default function PainNavigator() {
         {painNavigator.description2}
       </p>
       <div className="flex sm:flex-row flex-col justify-center mt-7">
-        <div className="flex sm:flex-row flex-col sm:justify-around justify-center sm:w-3/4 w-full">
+        <div className="flex sm:flex-row flex-col sm:justify-around justify-center sm:w-3/4 w-full ml-4">
           <Image
             className="flex justify-center rounded m-1"
             src={painNavImg2}
