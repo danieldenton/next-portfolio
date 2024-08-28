@@ -16,7 +16,7 @@ interface IProject {
 export default function Projects({ project, key }: IProject) {
   const { name, image, link, github, createdWith } = project;
   return (
-    <div className="border p-10 mx-auto">
+    <div className="p-10 mx-auto">
       <h2 className="flex justify-center text-xl">{name}</h2>
       <h2 className="flex justify-center">{createdWith}</h2>
       <div>
@@ -41,8 +41,8 @@ export default function Projects({ project, key }: IProject) {
         <Image
           src={image}
           alt="A Day In The Life"
-          className="border rounded"
-          width={378}
+          className="border rounded hover:border-yellow"
+          width={341}
           height={200}
         />
       </a>

@@ -30,5 +30,5 @@ const projectDivs = oldProjects.map((project, idx) => {
 });
 
 export default function ProjectPage() {
-  return <div className="flex sm:flex-row flex-col justify-around">{projectDivs}</div>;
+  return <div className="mx-20 flex sm:flex-row flex-col">{projectDivs}</div>;
 }
