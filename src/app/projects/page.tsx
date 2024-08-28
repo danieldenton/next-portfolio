@@ -1,4 +1,5 @@
 import Projects from "../components/projects";
+import PainNavigator from "../components/painnavigator";
 import dcdImg from "../../../public/assets/dcd.png";
 import dilImg from "../../../public/assets/dil.png";
 // import
@@ -28,6 +29,11 @@ export default function ProjectPage() {
   });
 
   return (
-    <div className="animate-fade sm:mx-20 flex sm:flex-row flex-col">{projectDivs}</div>
+    <div>
+      <PainNavigator />
+      <div className="animate-fade sm:mx-20 flex sm:flex-row flex-col">
+        {projectDivs}
+      </div>
+    </div>
   );
 }

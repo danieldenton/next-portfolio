@@ -20,7 +20,7 @@ export default function Projects({ project, key }: IProject) {
   return (
     <div className="p-10 mx-auto">
       <h2 className="flex justify-center text-xl">{name}</h2>
-      <h2 className="flex justify-center">{createdWith}</h2>
+      <h3 className="flex justify-center">{createdWith}</h3>
       <div>
         {/* {project.youtube1 ? (
           <div className="project-youtube-link">
