@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 import Github from "./github";
 
@@ -8,6 +9,7 @@ interface IProject {
     image: StaticImageData;
     link: string;
     github: string;
+    youtube: string | null
     createdWith: string;
   };
   key: number;
@@ -32,12 +34,12 @@ export default function Projects({ project, key }: IProject) {
           </div>
         ) : null} */}
         <div className="flex justify-center">
-          <a href={github} target="_blank" className="">
+          <Link href={github} target="_blank" className="">
             <Github />
-          </a>
+          </Link>
         </div>
       </div>
-      <a href={link} target="_blank">
+      <Link href={link} target="_blank">
         <Image
           src={image}
           alt="A Day In The Life"
@@ -45,7 +47,7 @@ export default function Projects({ project, key }: IProject) {
           width={427}
           height={250}
         />
-      </a>
+      </Link>
     </div>
   );
 }

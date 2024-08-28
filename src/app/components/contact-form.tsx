@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -34,7 +33,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="min-w-[400px] max-w-[600px] flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
+    <div className="animate-fade  max-w-[600px] flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
       {!messageSent && !error ? (
         <Form onSubmit={sendEmail} className="w-3/4">
           <Form.Group
@@ -80,12 +79,12 @@ export default function ContactForm() {
             />
           </Form.Group>
 
-          <Button
+          <button
             type="submit"
-            className="bg-grey rounded p-1.5 mt-4 font-bold w-full text-black hover:bg-white"
+            className="bg-grey rounded p-1.5 mt-5 font-bold w-full text-black hover:bg-white"
           >
             Send
-          </Button>
+          </button>
         </Form>
       ) : (
         <div>
@@ -99,6 +98,6 @@ export default function ContactForm() {
           )}
         </div>
       )}
-    </Card>
+    </div>
   );
 }

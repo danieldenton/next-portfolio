@@ -1,6 +1,6 @@
 import Projects from "../components/projects";
-import dcdImg from "../../../public/assets/dcd.png"
-import dilImg from "../../../public/assets/dil.png"
+import dcdImg from "../../../public/assets/dcd.png";
+import dilImg from "../../../public/assets/dil.png";
 // import
 
 const oldProjects = [
@@ -9,6 +9,7 @@ const oldProjects = [
     image: dcdImg,
     link: "https://deepcutdiscovery.netlify.app/",
     github: "https://github.com/danieldenton/deep-cut-discovery",
+    youtube: null,
     createdWith: "MongoDB, Express, React, Node",
   },
   {
@@ -16,19 +17,17 @@ const oldProjects = [
     image: dilImg,
     link: "https://dayinthelife.netlify.app",
     github: "https://github.com/danieldenton/day-in-life-client",
+    youtube: null,
     createdWith: "MongoDB, Express, React, Node",
   },
 ];
 
-const projectDivs = oldProjects.map((project, idx) => {
-  return (
-    <Projects
-      project={project}
-      key={idx}
-    />
-  );
-});
-
 export default function ProjectPage() {
-  return <div className="sm:mx-20 flex sm:flex-row flex-col">{projectDivs}</div>;
+  const projectDivs = oldProjects.map((project, idx) => {
+    return <Projects project={project} key={idx} />;
+  });
+
+  return (
+    <div className="animate-fade sm:mx-20 flex sm:flex-row flex-col">{projectDivs}</div>
+  );
 }

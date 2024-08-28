@@ -20,7 +20,7 @@ const config: Config = {
         grey: "#BDBDBD",
       },
       animation: {
-        fade: "fadeOut 2s ease-in-out",
+        fade: "fadeOut 1.5s ease-in-out",
       },
       keyframes: {
         fadeOut: {
