@@ -22,7 +22,7 @@ const painNavigator = {
 
 export default function PainNavigator() {
   return (
-    <div className="px-10 py-8 mx-10 border rounded">
+    <div className="px-10 py-8 mx-10 border rounded overflow-x-hidden">
       <h2 className="flex justify-center text-xl mb-1">{painNavigator.name}</h2>
       <p className="flex justify-center text-center text-lg mb-2">
         {painNavigator.createdWith}
