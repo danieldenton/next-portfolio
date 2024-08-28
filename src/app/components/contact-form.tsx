@@ -33,7 +33,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="animate-fade  max-w-[600px] flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
+    <div className="animate-fade min-w-[400px] max-w-[600px] flex justify-center align-center mx-auto border border-white py-10 rounded mt-20 w-2/5">
       {!messageSent && !error ? (
         <Form onSubmit={sendEmail} className="w-3/4">
           <Form.Group

@@ -22,7 +22,7 @@ const painNavigator = {
 
 export default function PainNavigator() {
   return (
-    <div className="px-10 py-8 mx-auto">
+    <div className="px-10 py-8 mx-10 border rounded">
       <h2 className="flex justify-center text-xl mb-1">{painNavigator.name}</h2>
       <p className="flex justify-center text-center text-lg mb-2">
         {painNavigator.createdWith}
@@ -33,24 +33,24 @@ export default function PainNavigator() {
       <p className="flex justify-center text-center mb-3">
         {painNavigator.description2}
       </p>
-      <div className="flex mt-7">
-        <div className="flex justify-around w-3/4">
+      <div className="flex flex-wrap sm:flex-row flex-col justify-center mt-7 flex-end">
+        <div className="flex sm:flex-row flex-col sm:justify-around justify-center sm:w-3/4 w-full">
           <Image
-            className="rounded"
+            className="flex justify-center rounded m-1"
             src={painNavImg2}
             alt="PainNavigator"
             height={487.25}
             width={225}
           />
           <Image
-            className="rounded"
+            className="rounded m-1"
             src={painNavImg}
             alt="PainNavigator"
             height={487.25}
             width={225}
           />
           <Image
-            className="rounded"
+            className="rounded m-1"
             src={painNavImg3}
             alt="PainNavigator"
             height={487.25}
@@ -59,7 +59,7 @@ export default function PainNavigator() {
         </div>
         <div className="flex flex-col w-1/4">
           <div className="flex flex-col justify-center">
-            <p className="text-center my-4">Mobile App Repository</p>
+            <p className="text-center my-4 mx-1">Mobile App Repository</p>
             <div className="flex justify-center">
               <Github githubLink={painNavigator.mobileAppGithub} />
             </div>
