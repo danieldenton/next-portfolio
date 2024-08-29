@@ -41,7 +41,7 @@ export default function Projects({ project, key }: IProject) {
         <Image
           src={image}
           alt={name}
-          className="border rounded hover:border-yellow min-w-[400px]"
+          className="border-2 rounded hover:border-yellow min-w-[400px]"
           width={427}
           height={250}
         />
