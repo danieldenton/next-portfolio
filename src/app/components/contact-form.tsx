@@ -46,6 +46,7 @@ export default function ContactForm() {
               name="name"
               className="rounded text-black focus:outline-none p-1"
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </Form.Group>
 
@@ -59,6 +60,7 @@ export default function ContactForm() {
               name="email"
               className="rounded text-black focus:outline-none p-1"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </Form.Group>
 
@@ -76,6 +78,7 @@ export default function ContactForm() {
               rows={8}
               className="rounded text-black focus:outline-none p-1"
               onChange={(e) => setMessage(e.target.value)}
+              required
             />
           </Form.Group>
 
