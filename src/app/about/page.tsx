@@ -16,8 +16,7 @@ export default function About() {
       </p>
       <p className="flex justify-center text-center text-lg mb-5">
         As of now, I'm working with an early stage start up, PainNavigator, as
-        their sole developer, making all technical decisions while taking into
-        account user experience and scalability. I currently work solo but I am
+        their sole developer, making all technical decisions. I currently work solo but I am
         also comfortable working on team in any role from leadership on down. I
         pride myself on writing clean, readable and efficient code, as well as
         my problem solving skills and work ethic.
