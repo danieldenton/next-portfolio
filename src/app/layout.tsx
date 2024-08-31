@@ -44,6 +44,7 @@ export default function RootLayout({
         <div className="flex justify-center">
         {children}
         </div>
+        <footer className="text-center my-4">DD 2024</footer>
       </body>
     </html>
   );

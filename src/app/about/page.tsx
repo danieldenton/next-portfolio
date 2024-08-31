@@ -3,7 +3,7 @@ import headshot from "../../../public/assets/headshot.png"
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-center items-center animate-fade sm:w-3/4 w-full mt-7 sm:mb-[300px] overflow-hidden">
+    <div className="flex flex-col justify-center items-center animate-fade sm:w-3/4 w-full mt-7 sm:mb-[250px] overflow-hidden">
       <Image src={headshot} alt="headshot" className="rounded-full mb-9" height={160} width={160}/>
       <p className="flex justify-center text-center text-lg mb-5">
         I'm a full stack developer currently working with React Native and Ruby
