@@ -18,7 +18,7 @@ interface IProject {
 export default function Projects({ project, key }: IProject) {
   const { name, image, link, github, createdWith } = project;
   return (
-    <div className="sm:p-10">
+    <div className="sm:p-10 mt-2">
       <h2 className="flex justify-center text-xl">{name}</h2>
       <h3 className="flex justify-center">{createdWith}</h3>
       <div>
