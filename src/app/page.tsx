@@ -2,9 +2,9 @@ import ContactForm from "./components/contact-form";
 
 export default function Home() {
   return (
-    <div className="sm:mx-20 flex justify-around flex-col overflow-hidden">
+    <div className="flex justify-center flex-col">
     <ContactForm />
-    <p className="text-center my-2 mt-10">DD 2024</p>
+    <p className="text-center my-2 mt-[100px]">DD 2024</p>
     </div>
   );
 }
