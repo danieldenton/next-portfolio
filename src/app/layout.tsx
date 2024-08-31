@@ -6,7 +6,10 @@ import Github from "./components/github";
 import LinkedIn from "./components/linkedin";
 
 export const metadata: Metadata = {
-  title: "Daniel Denton Dev",
+   title: {
+    template: '%s | Daniel Denton Dev',
+    default: 'Daniel Denton Dev',
+  },
   description: "Daniel Denton software developer portfolio",
 };
 

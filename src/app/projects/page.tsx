@@ -1,8 +1,12 @@
+import { Metadata } from "next";
 import Projects from "../components/projects";
 import PainNavigator from "../components/painnavigator";
 import dcdImg from "../../../public/assets/dcd.png";
 import dilImg from "../../../public/assets/dil.png";
-// import
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 
 const oldProjects = [
   {

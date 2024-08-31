@@ -1,8 +1,12 @@
+import { Metadata } from "next";
 import Projects from "../components/projects";
-
 import cloudSwap from "../../../public/assets/CloudSwap.png";
 import bMSwap from "../../../public/assets/BMSwap.png";
 import dexAgg from "../../../public/assets/DexAgg.png";
+
+export const metadata: Metadata = {
+  title: "Web3",
+};
 
 const projects = [
   {
@@ -37,10 +41,8 @@ export default function Web3() {
   });
 
   return (
-  
-      <div className="animate-fade sm:mx-20 flex sm:flex-wrap no-wrap sm:flex-row flex-col sm:justify-around justify-center sm:mb-[250px] my-10 overflow-hidden">
-        {projectDivs}
-      </div>
-   
+    <div className="animate-fade sm:mx-20 flex sm:flex-wrap no-wrap sm:flex-row flex-col sm:justify-around justify-center sm:mb-[250px] my-10 overflow-hidden">
+      {projectDivs}
+    </div>
   );
 }
