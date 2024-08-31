@@ -33,7 +33,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="sm:min-w-[450px] min-w-[400px] max-w-[600px] flex flex-wrap justify-center mx-auto border-4 py-10 rounded mt-20 overflow-hidden">
+    <div className="sm:min-w-[450px] min-w-[400px] max-w-[600px] flex justify-center mx-auto border-4 py-10 rounded mt-20">
       {!messageSent && !error ? (
         <Form onSubmit={sendEmail} className="w-3/4">
           <Form.Group
