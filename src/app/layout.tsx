@@ -7,7 +7,7 @@ import LinkedIn from "./components/linkedin";
 
 export const metadata: Metadata = {
   title: "Daniel Denton Dev",
-  description: "A portfolio site",
+  description: "Daniel Denton software developer portfolio",
 };
 
 export default function RootLayout({
