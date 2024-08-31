@@ -22,35 +22,35 @@ const painNavigator = {
 
 export default function PainNavigator() {
   return (
-    <div className="px-10 py-8 mx-10">
+    <div className="sm:px-10 py-8 sm:mx-10">
       <h2 className="flex justify-center text-xl mb-1">{painNavigator.name}</h2>
       <p className="flex justify-center text-center text-lg mb-2">
         {painNavigator.createdWith}
       </p>
-      <p className="flex justify-center text-center sm:px-10 mb-3">
+      <p className="text-center sm:px-10 p-0 mb-3">
         {painNavigator.description}
       </p>
-      <p className="flex justify-center text-center mb-3">
+      <p className="text-center mb-3">
         {painNavigator.description2}
       </p>
       <div className="flex sm:flex-row flex-col justify-center mt-7">
-        <div className="flex sm:flex-row flex-col sm:justify-around justify-center sm:w-3/4 w-full">
+        <div className="flex sm:flex-row flex-col sm:justify-around justify-center w-full">
           <Image
-            className="flex justify-center rounded m-1"
+            className="rounded mx-auto mb-1"
             src={painNavImg2}
             alt="PainNavigator"
             height={487.25}
             width={225}
           />
           <Image
-            className="rounded m-1"
+            className="rounded mx-auto mb-1"
             src={painNavImg}
             alt="PainNavigator"
             height={487.25}
             width={225}
           />
           <Image
-            className="rounded m-1"
+            className="rounded mx-auto mb-1"
             src={painNavImg3}
             alt="PainNavigator"
             height={487.25}

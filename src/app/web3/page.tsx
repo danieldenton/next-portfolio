@@ -37,10 +37,10 @@ export default function Web3() {
   });
 
   return (
-    <div className="animate-fade">
-      <div className="sm:mx-20 flex flex-wrap sm:flex-row flex-col justify-around my-10">
+  
+      <div className="animate-fade sm:mx-20 flex flex-wrap sm:flex-row flex-col sm:justify-around justify-center my-10 overflow-hidden">
         {projectDivs}
       </div>
-    </div>
+   
   );
 }
