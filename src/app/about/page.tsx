@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="flex flex-col justify-center items-center animate-grow-fade sm:w-3/4 w-full mt-7 sm:mb-[250px] overflow-hidden">
-    
       <Image
         src={headshot}
         alt="headshot"
@@ -18,11 +17,11 @@ export default function About() {
         width={160}
       />
       <p className="flex justify-center text-center text-lg mb-5">
-        I'm a full stack developer currently working with React Native, Ruby
-        on Rails and PostgreSQL, however I'm comfortable working with a variety of languages,
-        frameworks and libraries on both the front and back end. This includes
-        blockchain. Recently I've been building apps using Solidity, Hardhat and
-        Ethers.js. I'm very confident in my ability to learn and work with new
+        I'm a full stack developer currently working with React Native, Ruby on
+        Rails and PostgreSQL, however I'm comfortable working with a variety of
+        languages, frameworks and libraries on both the front and back end.
+        Recently I've been building apps with NextJS and smart contracts using
+        Solidity. I'm very confident in my ability to learn and work with new
         technologies.
       </p>
       <p className="flex justify-center text-center text-lg mb-5">
