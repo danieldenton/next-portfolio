@@ -36,7 +36,7 @@ export default function PainNavigator() {
       <div className="flex sm:flex-row flex-col justify-center mt-7">
         <div className="flex sm:flex-row flex-col sm:justify-around justify-center w-full">
           <Image
-            className="rounded mx-auto mb-1"
+            className="rounded mx-auto mb-1 custom-shadow"
             src={painNavImg2}
             alt="PainNavigator"
             height={487.25}
