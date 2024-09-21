@@ -11,7 +11,7 @@ const Modal = () => {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
-      <div className="bg-white rounded-lg shadow-lg p-6 w-1/3 py-20 animate-grow-fade ">
+      <div className="bg-white rounded-lg shadow-lg p-6 sm:w-1/3 w-full py-20 animate-grow-fade ">
         <div className="mt-4">
           <h1 className="text-2xl font-semibold text-black text-center">
             Welcome my portfolio site.
