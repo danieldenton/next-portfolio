@@ -15,7 +15,7 @@ export default function Header() {
         </div>
         <div>
           <div className="flex flex-row sm:justify-end justify-center mt-1">
-            <Github />
+            <Github githubLink={"https://github.com/danieldenton"}/>
             <LinkedIn />
           </div>
           <h2 className="flex sm:justify-end justify-center ">

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-center items-center animate-fade sm:w-3/4 w-full mt-7 sm:mb-[250px] overflow-hidden">
+    <div className="flex flex-col justify-center items-center animate-grow-fade sm:w-3/4 w-full mt-7 sm:mb-[250px] overflow-hidden">
     
       <Image
         src={headshot}

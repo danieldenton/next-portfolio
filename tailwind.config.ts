@@ -20,12 +20,16 @@ const config: Config = {
         grey: "#BDBDBD",
       },
       animation: {
-        fade: "fadeOut 1.5s ease-in-out",
+        "grow-fade": "growIn .75s ease-in-out, fadeOut 1s ease-in-out",
       },
       keyframes: {
         fadeOut: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        growIn: {
+          "0%": { transform: "scale(0.99)" },
+          "100%": { transform: "scale(1)" },
         },
       },
     },

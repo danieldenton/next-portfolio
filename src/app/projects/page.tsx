@@ -33,7 +33,7 @@ export default function ProjectPage() {
   });
 
   return (
-    <div className="animate-fade overflow-hidden">
+    <div className="animate-grow-fade overflow-hidden">
       <PainNavigator />
       <div className="sm:mx-20 mx-0 flex sm:flex-row flex-col sm:justify-around justify-center my-10">
         {projectDivs}

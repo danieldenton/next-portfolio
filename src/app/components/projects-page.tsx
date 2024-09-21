@@ -28,7 +28,7 @@ export default function ProjectsPage() {
   });
 
   return (
-    <div className="animate-fade overflow-hidden py-10 mt-20">
+    <div className="animate-grow-fade overflow-hidden py-10 mt-20">
         <h1 className="text-center text-3xl mb-4">Projects</h1>
       <PainNavigator />
       <div className="sm:mx-20 mx-0 flex sm:flex-row flex-col sm:justify-around justify-center my-10">
