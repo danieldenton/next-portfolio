@@ -4,8 +4,9 @@ import headshot from "../../../public/assets/headshot.png"
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col justify-center items-center animate-fade sm:w-3/4 w-full mt-7 sm:mb-[250px] overflow-hidden">
-      <Image src={headshot} alt="headshot" className="rounded-full mb-9" height={160} width={160}/>
+    <div className="flex flex-col justify-center items-center animate-fade sm:w-3/4 w-full mt-10 overflow-hidden py-10">
+      <h1 className="text-center text-3xl mb-4">About</h1>
+      <Image src={headshot} alt="headshot" className="rounded-full my-9" height={160} width={160}/>
       <p className="flex justify-center text-center text-lg mb-5">
         I'm a full stack developer currently working with React Native and Ruby
         on Rails, however I'm comfortable working with a variety of languages,

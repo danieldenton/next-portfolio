@@ -1,5 +1,6 @@
 "use client";
 
+// import { Link } from 'react-scroll';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
@@ -36,4 +37,52 @@ export const Navbar = () => {
       {navLinks}
     </div>
   );
+  //  return (
+  //   <nav className="flex space-x-4 p-4 bg-gray-800 text-white">
+  //     <Link
+  //       activeClass="active"
+  //       to="contact"
+  //       spy={true}
+  //       smooth={true}
+  //       offset={-70}
+  //       duration={500}
+  //       className="cursor-pointer"
+  //     >
+  //       Contact
+  //     </Link>
+  //     <Link
+  //       activeClass="active"
+  //       to="about"
+  //       spy={true}
+  //       smooth={true}
+  //       offset={-70}
+  //       duration={500}
+  //       className="cursor-pointer"
+  //     >
+  //       About
+  //     </Link>
+  //     <Link
+  //       activeClass="active"
+  //       to="projects"
+  //       spy={true}
+  //       smooth={true}
+  //       offset={-70}
+  //       duration={500}
+  //       className="cursor-pointer"
+  //     >
+  //       Projects
+  //     </Link>
+  //     <Link
+  //       activeClass="active"
+  //       to="web3"
+  //       spy={true}
+  //       smooth={true}
+  //       offset={-70}
+  //       duration={500}
+  //       className="cursor-pointer"
+  //     >
+  //       Web3
+  //     </Link>
+  //   </nav>
+  // );
 };

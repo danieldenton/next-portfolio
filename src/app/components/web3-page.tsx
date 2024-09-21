@@ -36,8 +36,12 @@ export default function Web3Page() {
   });
 
   return (
+    <div className="py-10 mt-20">
+    <h1 className="text-center text-3xl">Web3</h1>
     <div className="animate-fade sm:mx-20 flex sm:flex-wrap no-wrap sm:flex-row flex-col sm:justify-around justify-center sm:mb-[250px] my-10 overflow-hidden">
+         
       {projectDivs}
+    </div>
     </div>
   );
 }
